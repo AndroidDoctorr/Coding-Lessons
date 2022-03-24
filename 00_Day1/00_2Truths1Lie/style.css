@@ -1,0 +1,30 @@
+h1 {
+	color: lightgreen;
+	text-align: center;
+}
+
+h3 {
+	color: blue;
+}
+
+p {
+	color: red;
+}
+
+.main-content {
+	border: solid 3px black;
+	border-radius: 15px;
+	background-color: grey;
+}
+
+.flex-display {
+	display: flex;
+}
+
+.factoid {
+	padding: 1em;
+	border: solid 1px black;
+	border-radius: 15px;
+	background-color: lightgrey;
+	width: 33.33333%;
+}
