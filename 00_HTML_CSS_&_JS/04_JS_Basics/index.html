@@ -1,0 +1,31 @@
+<!-- Create a basic HTML page with ! + Tab -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Only add this at the end if you have time to mention jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Start with the js in a script tag, then we'll create and move the code into this file -->
+    <script src="./script.js" type="text/javascript"> </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- This div has an ID so we can target it later and add children to it -->
+    <div id="container">
+        <form>
+            <!-- We'll take the value from this text input and use it in a function -->
+            <input type="text" id="nameInput" />
+            <!-- This is used to trigger the first function -->
+            <input onclick="doSomething();" type="button" value="Click me!" />
+        </form>
+        <!-- This is a button for the second function -->
+        <input onclick="doSomethingElse();" type="button" value="Don't click me!" />
+    </div>
+</body>
+
+</html>
