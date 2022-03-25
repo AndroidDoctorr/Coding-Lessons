@@ -1,4 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// The Program.cs file is the default entry point into a C# application, kind of like how
+// index.html is the default entry point into a web page. This is where the application
+// instructions begin.
+
 Console.WriteLine("Hello, World!");
 
 // BOOLEANS
