@@ -106,14 +106,14 @@ for (int i = 0; i < students.Length; i++)
 
 
 // Let's bring that collection of students back again
-string[] students = { "Adam", "Justin", "Joshua", "Amanda", "Danielle", "Ingeborg" };
+string[] newStudents = { "Adam", "Justin", "Joshua", "Amanda", "Danielle", "Ingeborg" };
 
 //1 Collection being worked on
 //2 Name of the current iteration
 //3 Type in the collection
 //4 in keyword used to seperate the individual and the collection
 //foreach //3  //2  //4  //1
-foreach (string student in students)
+foreach (string student in newStudents)
 {
     Console.WriteLine(student + " is a student in the class.");
 }
