@@ -1,13 +1,10 @@
-﻿All of Day One's materials will be covering HTML and CSS.
+﻿This is the repository for lecture notes for Coding Foundation/Immersion (V4)
 
-We will be using Visual Studio Code for the projects today.
+The project code from those lessons (minus the SQL content) is contained in this repo
 
-Inside our ElevenFiftyProjects folder we can create a new folder for the HTML work.
-It's important to emphasize to the students to maintain a clean work space.
+Day 1 is focused on installs, introductions, and git, so this starts with Day 2 content
+Day 2 is HTML and CSS
+Day 3 is also HTML and CSS
+Day 4 can introduce JS, but will most likely be needed for HTML and CSS
 
-The flow today will start off by going through the 2 Truths, 1 Lie challenge (optional).
-This is followed by what should be review over basic forms (form, input, button, & divs).
-After this, pass out the Register Form challenge (found in Canvas) for the students to complete.
-This should wrap up either right before or after lunch.
-Afterwards, you can walk through deploying it to GitHub Pages if you feel so inclined (advised).
-The rest of the day can be the smiley face walkthrough and assigning the CSS creature.
+Week 2 introduces JS, followed by C# baiscs (01_TypesAndVariables)
