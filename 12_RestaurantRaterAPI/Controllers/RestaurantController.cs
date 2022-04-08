@@ -38,27 +38,13 @@ public class RestaurantController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetRestaurants()
     {
+        // var restaurants = await _context.Restaurants.ToListAsync();
+
+        // version with include
+        // This will require refernece loop handling in the program.cs
         var restaurants = await _context.Restaurants.Include(r => r.Ratings).ToListAsync();
-        var restaurantListItems = restaurants.Select(restaurant =>
-        {
-            RestaurantListItem listItem = new RestaurantListItem();
 
-            listItem.Id = restaurant.Id;
-            listItem.Location = restaurant.Location;
-            listItem.Name = restaurant.Name;
-
-            if (restaurant.Ratings.Count == 0)
-            {
-                listItem.AverageScore = 0;
-            }
-            else
-            {
-                listItem.AverageScore = restaurant.Ratings.Select(s => s.Score).Average();
-            }
-            return listItem;
-        });
-
-        return Ok(restaurantListItems);
+        return Ok(restaurants);
     }
 
     [HttpGet]
@@ -69,7 +55,7 @@ public class RestaurantController : ControllerBase
         //Alternate version with include
         //This will require refernece loop handling in the program.cs
         var restaurant = await _context.Restaurants.Include(r => r.Ratings).FirstOrDefaultAsync(r => r.Id == id);
-        
+
         if (restaurant == null)
         {
             return NotFound();
@@ -118,5 +104,47 @@ public class RestaurantController : ControllerBase
         await _context.SaveChangesAsync();
 
         return Ok(); // 200            
+    }
+
+
+    //Using Display Class
+    //Get All Restaurants
+    //Display model handles the reference loops that we encountered earlier.
+    //If you like you can comment that out and show that this method will still run.
+    [HttpGet]
+    //If you want to have both you will need to route one of them
+    [Route("ListItem")]
+    public async Task<IActionResult> GetRestaurantListItems()
+    {
+        var restaurants = await _context.Restaurants.Include(r => r.Ratings).ToListAsync();
+        var restaurantList = restaurants.Select(restaurant =>
+        {
+            var ratings = restaurant.Ratings;
+
+            //setting default values to 0
+            double averageFoodScore = 0;
+            double averageCleanlinessScore = 0;
+            double averageAtmosphereScore = 0;
+
+            //If restaurant has ratings going ahead and averaging them out
+            if (ratings.Count > 0)
+            {
+                averageFoodScore = ratings.Select(s => s.FoodScore).Average();
+                averageCleanlinessScore = ratings.Select(s => s.CleanlinessScore).Average();
+                averageAtmosphereScore = ratings.Select(s => s.AtmosphereScore).Average();
+            }
+
+            return new RestaurantListItem()
+            {
+                Id = restaurant.Id,
+                Name = restaurant.Name,
+                Location = restaurant.Location,
+                AverageFoodScore = Math.Round(averageFoodScore, 2),
+                AverageCleanlinessScore = Math.Round(averageCleanlinessScore, 2),
+                AverageAtmosphereScore = Math.Round(averageAtmosphereScore, 2),
+            };
+        });
+
+        return Ok(restaurantList);
     }
 }

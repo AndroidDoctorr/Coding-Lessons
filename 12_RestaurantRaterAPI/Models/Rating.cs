@@ -16,20 +16,18 @@ public class Rating
 
         //Make sure these match up with what your Rating table
         //You may have just a Score Column or if you
-        //Refactored it you will have three scores
-        [Required]
-        public double Score { get; set; }
+        //Refactored it you will have three scores       
 
-        // [Required]
-        // public double FoodScore { get; set; }
-        // [Required]
-        // public double CleanlinessScore { get; set; }
-        // [Required]
-        // public double AtmosphereScore { get; set; }
+        [Required]
+        public double FoodScore { get; set; }
+        [Required]
+        public double CleanlinessScore { get; set; }
+        [Required]
+        public double AtmosphereScore { get; set; }
 
         //We will now fo back over to the RestaurantDbContext to add our DbSets
 
-        //Virtual Property for later
+        //Virtual Property we will add later
         public virtual Restaurant Restaurant { get; set; }
 }
 

@@ -11,6 +11,10 @@ namespace RestaurantRaterAPI.Models
         [Required]
         public int RestaurantId { get; set; }
         [Required]
-        public double Score { get; set; }
+        public double FoodScore { get; set; }
+        [Required]
+        public double CleanlinessScore { get; set; }
+        [Required]
+        public double AtmosphereScore { get; set; }
     }
 }
