@@ -80,3 +80,6 @@ DateTime birthday = new DateTime(1972, 6, 20);
 // We'll see this new keyword more as we start working with more complex objects
 // This keyword literally creates a NEW instance of whatever type you're using, allocating memory for the new object
 // We will talk more about constructor methods in the future
+
+
+Console.WriteLine("A: " + (int)'A');

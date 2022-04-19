@@ -21,10 +21,73 @@
     Wrap each Truth/Lie in separate divs, give them each a BORDER, curve the BORDER, and make each BACKGROUND COLOR LIGHT GREY
     CENTER everyting in each div
     Line each Truth/Lie side-by-side
+
+
+
+Open your Command Prompt, or the shell if you're on MacOS, or PowerShell,
+if you've installed it, or the Windows Terminal (which I'll be using)
+
+In Windows and MacOS you have a default user folder you can start from, usually users
+slash your user name.
+
+to make a new folder here, you can type "mkdir source" - I'm calling it this because
+this is the default locaiton Visual Studio Community uses to store projects
+You can use start somewhere different if you like but to make things simpler, I like
+to set up mine like this.
+
+If you've ever tried creating a project with Visual Studio Community, you should already
+have a folder like this, so don't worry if you get an error message saying that folder
+already exists
+
+to open this folder, you can use the "start" command. This is used to start programs,
+but it can also open folders in your default file explorer
+"start source" should open the source folder
+in the MacOs terminal this is "open source"
+
+Back in the terminal, let's move the terminal location to inside that folder
+that's this path we see on the left here
+
+"CD source"
+
+"mkdir repos"
+
+we can now move into the repos folder
+
+cd repos
+
+and if we want to start this folder from inside it, we can use
+
+start .
+
+here, you can make a folder called "EFA", or "EFA Projects" or "EFA Foundation"
+You can put separate Foundation and Immersion (or whatever) in one folder,
+or create different folders. It's up to you. More folders means a more complex
+file structure with longer addresses and harder to reach files, but it also makes
+organization a lot easier
+
+
+HTML, or HyperText Markup Language is a language that describes to web browsers
+exactly how to display a web page. HTML originally just consisted of text, boxes,
+and text in boxes.
+
+HTML elements are based on the Box Model, meaning they're all basically just boxes.
+With styles, you can change the color, width, height, thickness, position, and other
+properties of the boxes, as well as the style of the text.
+
+HTML styles often borrow terms from printing, since it deals with the same basic problem
+fitting content onto a page in a way that looks nice and readable
+
+Like with newspapers, HTMl styles are concerned with padding, margin, columns,
+width, height, and font properties. They even use units like ems and ens, the width
+of the printed letter M or N, respectively.
+
+create this:
+
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,23 +95,25 @@
     <link rel="stylesheet" href="style.css">
     <title>2 Truths, 1 Lie</title>
 </head>
+
 <body>
     <div class="main-content">
         <h1>Two Truths and a Lie</h1>
         <div class="flex-display">
             <div class="factoid">
-                <h3>Visiting Haiti</h3>
-                <p>The only time I have been out of the country was when I went to Haiti, one of the poorest countries in the world.</p>
+                <h3>Pi</h3>
+                <p>I have pi memorized to over 50 places</p>
             </div>
             <div class="factoid">
-                <h3>Custom Build</h3>
-                <p>I custom built my first computer when I was just 10 years old.</p>
+                <h3>You know nothing</h3>
+                <p>I have an encyclopedic knowledge of Game of Thrones</p>
             </div>
             <div class="factoid">
-                <h3>Art School Dropout</h3>
-                <p>After one semester in art school it was announced that they would be shutting down the program.</p>
+                <h3>I own a full set of Roman legionary armor</h3>
+                <p>SPQR</p>
             </div>
         </div>
     </div>
 </body>
+
 </html>

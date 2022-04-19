@@ -14,6 +14,19 @@ function doSomething() {
 }
 
 function doSomethingElse() {
+  var someNewArray = [
+    1,
+    true,
+    "hello",
+    {
+      foo: "bar",
+    },
+    null,
+    undefined,
+  ];
+}
+
+function doSomethingElse() {
   // Demonstrage several types at once:
   const someArray = [
     1,
