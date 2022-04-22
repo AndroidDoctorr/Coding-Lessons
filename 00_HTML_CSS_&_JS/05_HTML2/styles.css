@@ -1,0 +1,52 @@
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+}
+  
+#circle {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  background-color: orange;
+  border: thick solid black;
+}
+
+.rectangle {
+  margin: 2rem;
+  height: 5rem;
+  width: 10rem;
+}
+
+.vaporwave {
+  background: linear-gradient(45deg, purple 0%, cyan 33%, magenta 67%, mediumblue 100%);
+}
+
+.parent {
+  display: flex;
+  height: 300px;
+  background-color:blueviolet;
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: orangered;
+}
+
+.animateOnHover {
+  width: 10rem;
+  height: 5rem;
+  background-color: blue;
+  /* transition: width 1s, height 2s, background-color 5s; */
+  transition: all 0.5s ease-out;
+}
+
+.animateOnHover:hover {
+  background-color: green;
+  width: 12rem;
+  height: 6rem;
+}

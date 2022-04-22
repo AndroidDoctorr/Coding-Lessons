@@ -4,6 +4,12 @@ const doSomething = () => {
   // object prototype
   // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
   //
+  // Demo the object prototype in the console
+  //
+  // const newObj = { toString: () => "George", foo: "bar" };
+  // alert(newObj);
+  // alert(Object.keys(newObj));
+  //
   // let { three, five, six } = returnMultiple();
   // alert(three);
   // alert(five);
@@ -19,10 +25,10 @@ const doSomething = () => {
   // alert(counter.next());
   // alert(otherCounter.next());
   //
-  inception().howDeepAmI();
-  inception().goDeeper().goDeeper().howDeepAmI();
-  inception().goDeeper().goDeeper().goDeeper().howDeepAmI();
-  inception().goDeeper().goDeeper().goDeeper().kick().howDeepAmI();
+  // inception().howDeepAmI();
+  // inception().goDeeper().goDeeper().howDeepAmI();
+  // inception().goDeeper().goDeeper().goDeeper().howDeepAmI();
+  // inception().goDeeper().goDeeper().goDeeper().kick().howDeepAmI();
 };
 
 // multiple return values from a function
