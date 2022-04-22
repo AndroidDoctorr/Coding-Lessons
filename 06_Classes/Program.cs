@@ -249,6 +249,7 @@ public class Calculator
     // Add
     public int Add(int numOne, int numTwo)
     {
+        Console.WriteLine("sdgdffdgffgfh");
         int sum = numOne + numTwo;
         return sum;
     }
