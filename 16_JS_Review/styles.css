@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #24a0e7;
+    background-image: url("https://www.transparenttextures.com/patterns/little-pluses.png");
+    padding: 5vh 10vw; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+    height: 33vh;
+    width: 80vw;
+    background-color: #b9e4fce8;
+    box-shadow: 5px 10px 8px #757575;
+}
+
+aside {
+    border: 2px solid black;
+    float: right;
+    margin-top: 2vh;
+    margin-left: 1vh;
+    height: 43vh;
+    width: 25vw;
+    background-color: #b9e4fcd0;
+    padding: 1vh 2vw;
+    box-shadow: 5px 10px 8px #757575;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    margin-top: 2vh;
+    padding: 1vh 2vw;
+    height: 43vh;
+    width: 53.5vw;
+    background-color: #b9e4fcd0;
+    padding: 1vh 1vw;
+    box-shadow: 5px 10px 8px #757575;
+}
+
+article p {
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+}
+
+footer {
+    height: 10vh;
+    width: 80vw;
+    margin-top: 2vh;
+    border: .5px solid rgba(0, 0, 0, 0.202);
+    box-shadow: 5px 10px 8px #757575;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #b9e4fc86;
+    padding: 1vh 3vw;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: rgb(10, 10, 96);
+}
+  
+a:hover {
+    text-decoration: underline;
+    color: rgb(37, 37, 173);
+}
+
+@media only screen and (max-width: 880px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main, aside, article, footer {
+        min-height: auto;
+        min-width: 80vw;
+        margin: 1vh 1vw;
+        padding: 1vh 3vw;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    main, aside, article {
+        max-height: fit-content;
+        display: block;
+        overflow: scroll;
+        padding: 1vh 1vw;
+    }
+
+    aside {
+        max-height: 14vh;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
